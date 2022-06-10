@@ -20,8 +20,8 @@ public class CalculatorModel {
 	calculationValue = firstNumber + secondNumber;
     }
 	
-    public int getCalculationValue() {
-		
+    public int getCalculationValue(int firstFactor, int secondFactor) {
+	calculationValue = firstFactor * secondFactor;
 	return calculationValue;		
     }	
 } // end CalculatorModel
