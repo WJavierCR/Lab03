@@ -27,7 +27,8 @@ public class CalculatorView extends JFrame {
 	private final JTextField secondFactor = new JTextField(10);
 	private final JButton calculateProduct = new JButton("Calc Product");
 	private final JTextField productValue = new JTextField(10);
-	CalculatorView() {
+	
+        CalculatorView() {
 		this.setLayout(new GridLayout(2,1));
 	// Sets up the view and adds the visual Java Swing components.
 		
@@ -103,10 +104,7 @@ public class CalculatorView extends JFrame {
 	// If the calculateButton is clicked, execute a method
 	// in the Controller named actionPerformed
 	
-	void addCalculateListener(ActionListener listenForCalcButton) {
-		
-		calculateButton.addActionListener(listenForCalcButton);		
-	}
+	
         public int getFirstFactor() {
 		
 		return Integer.parseInt(firstFactor.getText());		
@@ -132,12 +130,16 @@ public class CalculatorView extends JFrame {
 	
 	void addCalculateListener(ActionListener listenForCalcButton) {
 		
-		calculateButton.addActionListener(listenForCalcButton);		
-	}
-	void addProductListener(ActionListener listenForCalcProduct) {
+		calculateButton.addActionListener(listenForCalcButton);	
+                
+	}	
+        void addProductListener(ActionListener listenForCalcButton) {
+	calculateProduct.addActionListener(listenForCalcButton);
+        }
+	//void addProductListener(ActionListener listenForCalcProduct) {
 		
-		calculateProduct.addActionListener(listenForCalcProduct);		
-	}
+		//calculateProduct.addActionListener(listenForCalcProduct);		
+	//}
 	// Open a popup panel that contains the error message passed to it.
 	
 	void displayErrorMessage(String errorMessage) {
@@ -145,7 +147,7 @@ public class CalculatorView extends JFrame {
 		JOptionPane.showMessageDialog(this, errorMessage);		
 	}	
 
-    private void setLaout(GridLayout gridLayout) {
+    private void setLayout(GridLayout gridLayout) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }  //end CalculatorView
