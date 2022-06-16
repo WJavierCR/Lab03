@@ -115,14 +115,14 @@ public class CalculatorView extends JFrame {
 		return Integer.parseInt(secondFactor.getText());		
 	}
 	
-	public int getCalculateProduct() {
+	public int getProductValue() {
 		
-		return Integer.parseInt(calculateProduct.getText());		
+		return Integer.parseInt(productValue.getText());		
 	}
 	
-	public void setProductValue(int value) {
+	public void setProductSolution(int solution) {
 		
-		calculateProduct.setText(Integer.toString(value));		
+		productValue.setText(Integer.toString(solution));		
 	}
 	
 	// If the calculateButton is clicked, execute a method
@@ -145,9 +145,7 @@ public class CalculatorView extends JFrame {
 	void displayErrorMessage(String errorMessage) {
 		
 		JOptionPane.showMessageDialog(this, errorMessage);		
-	}	
-
-    private void setLayout(GridLayout gridLayout) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-}  //end CalculatorView
+        
+        }
+}
+  //endCalculatorView

@@ -82,7 +82,7 @@ public class CalculatorController {
 				
                         theModel.multiplyTwoNumbers(firstNum, secondNum);
 			
-                        theView.setProductValue(theModel.getProductValue());			
+                        theView.setProductSolution(theModel.getProductValue());			
                     }
                     catch (NumberFormatException ex) {
 			// Provide an error message to the console output.	
